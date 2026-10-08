@@ -1,0 +1,18 @@
+### API call for creating user account
+###
+POST  http://127.0.0.1:8000/v1/spending/register/
+Content-Type: application/json
+
+{
+
+    "username":"flint",
+    "email":"flint@gmail.com",
+    "password":"flint@123"
+}
+
+###API call for listing current registered user details
+GET http://127.0.0.1:8000/v1/spending/user/
+Accept: application/json
+Authorization: Basic flint:flint@123
+
+
