@@ -15,4 +15,56 @@ GET http://127.0.0.1:8000/v1/spending/user/
 Accept: application/json
 Authorization: Basic flint:flint@123
 
+###Expense endpoints
 
+#API call for listing expenses
+###
+GET  http://127.0.0.1:8000/v1/spending/expense/
+Accept:  application/json
+Authorization: Basic flint:flint@123
+
+#API call for creating expenses
+###
+POST  http://127.0.0.1:8000/v1/spending/expense/
+Content-Type: application/json
+Authorization: Basic flint:flint@123
+
+{
+
+    "title":"medicine",
+    "amount":500,
+    "category":"HEALTH",
+    "payment_method":"upi"
+
+}
+
+API call for retrieve 
+###
+GET  http://127.0.0.1:8000/v1/spending/expense/1/
+Accept:  application/json
+Authorization: Basic flint:flint@123
+
+#API call for updating expense
+###
+PUT http://127.0.0.1:8000/v1/spending/expense/1/
+Content-Type: application/json
+Authorization: Basic flint:flint@123
+
+{
+  "id": 1,
+  "title": "medicine",
+  "amount": "1000.00",
+  "category": "HEALTH",
+  "priority": "need",
+  "payment_method": "upi",
+  "created_at": "2026-10-09T06:09:43.028124Z",
+  "updated_at": "2026-10-09T06:09:43.028160Z",
+  "owner": 1
+}
+
+
+API call for retrieve 
+###
+DELETE   http://127.0.0.1:8000/v1/spending/expense/1/
+Accept:  application/json
+Authorization: Basic flint:flint@123
